@@ -1,15 +1,20 @@
-import React from 'react'
-import './styles/Subtotal.scss'
-import CurrencyFormat from "react-currency-format"
+import React from 'react';
+import './styles/Subtotal.scss';
+import CurrencyFormat from 'react-currency-format';
+import { useStateValue } from './StateProvider';
+import { getBasketTotal } from './reducer';
 
 function Subtotal() {
+  const [{ basket }] = useStateValue();
+
+  console.log(basket.item);
   return (
     <div className="subtotal">
       <CurrencyFormat
         renderText={(value) => (
           <>
             <p>
-              Subtotal (0 items):
+              Subtotal ({basket.length} items):
               <strong>{` ${value}`}</strong>
             </p>
             <small className="subtotal__gift">
@@ -19,7 +24,7 @@ function Subtotal() {
           </>
         )}
         decimalScale={2}
-        value={0}
+        value={getBasketTotal(basket)}
         displayType={'text'}
         thousandSeparator={true}
         prefix={'€'}
@@ -30,25 +35,24 @@ function Subtotal() {
   );
 }
 
-export default Subtotal
+export default Subtotal;
 
-    // <CurrencyFormat
-      //   renderText={(value) => (
-      //     <>
-      //       <p>
-      //         Subtotal ({basket.length} items):
-      //         <strong>{` ${value}`}</strong>
-      //       </p>
-      //       <small className="subtotal__gift">
-      //         <input type="checkbox" />
-      //         This order contains a gift
-      //       </small>
-      //     </>
-      //   )}
-      //   decimalScale={2}
-      //   value={getBasketTotal(basket)}
-      //   displayType={'text'}
-      //   thousandSeparator={true}
-      //   prefix={'€'}
-      // />
-
+// <CurrencyFormat
+//   renderText={(value) => (
+//     <>
+//       <p>
+//         Subtotal ({basket.length} items):
+//         <strong>{` ${value}`}</strong>
+//       </p>
+//       <small className="subtotal__gift">
+//         <input type="checkbox" />
+//         This order contains a gift
+//       </small>
+//     </>
+//   )}
+//   decimalScale={2}
+//   value={getBasketTotal(basket)}
+//   displayType={'text'}
+//   thousandSeparator={true}
+//   prefix={'€'}
+// />
