@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Subtotal from './Subtotal';
-import './styles/Checkout.scss'
+import './styles/Checkout.scss';
 
 function Checkout() {
   return (
@@ -25,10 +25,9 @@ function Checkout() {
 
       <div className="checkout__right">
         <Subtotal />
-        
       </div>
     </div>
   );
 }
 
-export default Checkout
+export default Checkout;

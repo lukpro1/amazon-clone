@@ -1,9 +1,9 @@
-import React from "react";
-import Header from "./Header";
-import Home from "./Home";
-import Checkout from "./Checkout";
-import { BrowserRouter as Router , Switch, Route} from "react-router-dom";
-import "./styles/App.scss";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import Home from './Home';
+import Checkout from './Checkout';
+import './styles/App.scss';
 
 function App() {
   return (
