@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Subtotal from './Subtotal';
 import './styles/Checkout.scss';
@@ -5,6 +6,7 @@ import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 
 function Checkout() {
+  // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
 
   return (

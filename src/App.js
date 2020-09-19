@@ -14,12 +14,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
+          </Route>{' '}
           <Route path="/checkout">
             <Checkout />
-          </Route>
-        </Switch>
-      </div>
+          </Route>{' '}
+        </Switch>{' '}
+      </div>{' '}
     </Router>
   );
 }

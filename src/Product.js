@@ -7,6 +7,7 @@ function Product({ id, title, image, price, rating }) {
 
   const addToBasket = () => {
     // dispatch the item into the data layer
+    console.log(basket);
     dispatch({
       type: 'ADD_TO_BASKET',
       item: {
@@ -32,7 +33,9 @@ function Product({ id, title, image, price, rating }) {
             .fill()
             .map((_, i) => (
               <p>
-                <span>⭐</span>
+                <span role="img" aria-label="icon">
+                  ⭐
+                </span>
               </p>
             ))}
         </div>
