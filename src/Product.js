@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 import { useStateValue } from './StateProvider';
 import './styles/Product.scss';
@@ -32,7 +33,7 @@ function Product({ id, title, image, price, rating }) {
             .fill()
             .map((_, i) => (
               <p>
-                <span>⭐</span>
+                <span role="img">⭐</span>
               </p>
             ))}
         </div>
