@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Subtotal from './Subtotal';
 import './styles/Checkout.scss';
