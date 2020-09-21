@@ -9,11 +9,13 @@
     "allowImportExportEverywhere": true
   },
   "rules": {
-    "prettier/prettier": ["error", {
-      "singleQuote": true,
-      "parser": "flow"
-    }],
-    "no-unused-vars": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "parser": "flow"
+      }
+    ],
+    "no-unused-vars": "off",
     "no-console": "off",
     "func-names": "off",
     "no-process-exit": "off",

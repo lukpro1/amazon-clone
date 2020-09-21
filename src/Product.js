@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 import { useStateValue } from './StateProvider';
 import './styles/Product.scss';
